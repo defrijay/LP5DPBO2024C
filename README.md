@@ -5,6 +5,50 @@ Aplikasi Manajemen Data Mahasiswa adalah program sederhana yang memungkinkan pen
 
 ## Desain Program
 
+### Kelas Mahasiswa
+- **Deskripsi**: Kelas ini merepresentasikan objek Mahasiswa dengan atribut NIM, nama, jenis kelamin, dan lulusan.
+- **Atribut**:
+  - `nim` (String): NIM mahasiswa.
+  - `nama` (String): Nama mahasiswa.
+  - `jenisKelamin` (String): Jenis kelamin mahasiswa.
+  - `lulusan` (String): Lulusan mahasiswa.
+- **Metode**:
+  - `Mahasiswa(String nim, String nama, String jenisKelamin, String lulusan)`: Konstruktor untuk membuat objek Mahasiswa dengan parameter NIM, nama, jenis kelamin, dan lulusan.
+  - `setNim(String nim)`: Metode untuk mengatur nilai atribut nim.
+  - `setNama(String nama)`: Metode untuk mengatur nilai atribut nama.
+  - `setJenisKelamin(String jenisKelamin)`: Metode untuk mengatur nilai atribut jenisKelamin.
+  - `setLulusan(String lulusan)`: Metode untuk mengatur nilai atribut lulusan.
+  - `getNim()`: Metode untuk mengambil nilai atribut nim.
+  - `getNama()`: Metode untuk mengambil nilai atribut nama.
+  - `getJenisKelamin()`: Metode untuk mengambil nilai atribut jenisKelamin.
+  - `getLulusan()`: Metode untuk mengambil nilai atribut lulusan.
+
+### Kelas Menu (JFrame)
+- **Deskripsi**: Kelas ini mengatur antarmuka pengguna (GUI) dan logika program untuk Aplikasi Manajemen Data Mahasiswa.
+- **Atribut**:
+  - `listMahasiswa` (ArrayList\<Mahasiswa\>): ArrayList untuk menyimpan objek Mahasiswa.
+  - `selectedIndex` (int): Indeks baris yang dipilih pada tabel.
+- **Komponen GUI**:
+  - JTextField untuk NIM, nama.
+  - JComboBox untuk jenis kelamin, lulusan.
+  - JButton untuk operasi Add/Update, Cancel, Delete.
+  - JTable untuk menampilkan data mahasiswa.
+- **Metode Utama**:
+  - `Menu()`: Konstruktor kelas Menu yang inisialisasi komponen GUI dan mengatur listener.
+  - `setTable()`: Metode untuk mengatur model tabel dengan data mahasiswa.
+  - `insertData()`: Metode untuk menambahkan data mahasiswa baru ke dalam list.
+  - `updateData()`: Metode untuk mengupdate data mahasiswa yang dipilih pada tabel.
+  - `deleteData()`: Metode untuk menghapus data mahasiswa yang dipilih pada tabel.
+  - `clearForm()`: Metode untuk membersihkan formulir input.
+  - `populateList()`: Metode untuk mengisi list dengan data mahasiswa default.
+  - `main(String[] args)`: Metode utama untuk menjalankan aplikasi.
+
+## Catatan
+- Kelas Menu (JFrame) bertanggung jawab untuk mengatur antarmuka pengguna dan logika program.
+- Kelas Mahasiswa hanya bertanggung jawab untuk merepresentasikan objek Mahasiswa.
+- Penggunaan ArrayList untuk menyimpan data mahasiswa memudahkan operasi CRUD.
+
+
 ### Komponen Utama
 - **Mahasiswa.java**: Kelas untuk merepresentasikan objek Mahasiswa dengan atribut nim, nama, jenis kelamin, dan lulusan, serta metode getter dan setter untuk mengakses dan mengubah nilai atribut.
 - **Menu.java**: Kelas utama yang mengatur antarmuka pengguna (GUI) dan logika program. Kelas ini berisi logika untuk menambahkan, mengupdate, dan menghapus data mahasiswa, serta menampilkan data mahasiswa dalam sebuah tabel.
